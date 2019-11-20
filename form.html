@@ -13,17 +13,28 @@
 
 
     <header>
-      <h4>welcome!</h4>
+      <div class="row">
+        <h4>welcome!</h4>
+        <img src="">
+      </div>  
     </header>
 
-    <div id="dropDown" class="col s12">bleh</div>
-    <div id="locoSearch" class="col s12">blah</div>
     <div class="row deep-purple darken-1" id="search">
-    <div class="col s6" id="city">place for city input</div>
-    <div class="col s2" id="state">place for drop down state</div>
+      <div class="row">
+        <input type="text" id="locoSearch" class="col s6" id="city"></input>
+      <!-- <select class="col s4" id="state">
+        <option>...</option>
+      </select> -->
+        <a class='dropdown-trigger btn' data-target='dropdown1' id="dropDown" >Drop Me!</a>
+          <ul id='dropdown1' class='dropdown-content'>
+           <li><a href="#!">one</a></li>
+           <li><a href="#!">two</a></li>
+           <li><a href="#!">three</a></li>
+           <li><a href="#!">four</a></li>
+           <li><a href="#!">five</a></li>
+         </ul>
+      </div>  
     </div>
-
-    <!-- imput 4 city, drop down 4 state -->
 
     <!-- <table class="responsive-table">
         <tbody id="sport" class="deep-purple darken-3">
@@ -72,5 +83,21 @@
     </div>
 
 </body>
+
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<script>
+
+  // var instance = M.Dropdown.getInstance(elem);
+
+    //  document.addEventListener('DOMContentLoaded', function() {
+    //      var elems = document.querySelectorAll('.dropdown-trigger');
+    //      var instances = M.Dropdown.init(elems, options);
+    //    });
+      $(document).ready(function() {
+  $('.dropdown-trigger').dropdown();
+      });
+    
+</script>
 
 </html>
