@@ -13,12 +13,25 @@ $(document).ready(function(){
 // var restaurantTimeEl = $("#restaurantTime");
 // var restaurantPriceEl = $("#restaurantPrice");
 
-var city = prompt("What city?", "");
+var city = "nashville" //prompt("What city?", "");
 var size = 50;
-var state = prompt("What state code?", "");
-var optionType = prompt("Would you like to see Sports or Music", "");
+var state ="tn"// prompt("What state code?", "");
+var optionType = "sports"//prompt("Would you like to see Sports or Music", "");
 
 var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?city=" + city + "&stateCode="+ state + "&size=" + size + "&apikey=Si8AYzaqaeokY7Ehz9inIZMH5lR2XsNA";
+
+$('#dropdown2 option').on('click',(e)=>{
+    state = e.target.value;
+    console.log(state);
+    $("#stateId").text(state);
+});
+$('#dropdown1 option').on('click',(e)=>{
+    optionType = e.target.value;
+    console.log(optionType);
+    $("#eventId").text(optionType);
+});
+
+
 
 $.ajax({
     url: queryURL,
