@@ -47,6 +47,19 @@ function optionFormat(optionType) {
     console.log(optionType);
 };
 
+$('#dropdown2 option').on('click',(e)=>{
+    state = e.target.value;
+    console.log(state);
+    $("#stateId").text(state);
+});
+$('#dropdown1 option').on('click',(e)=>{
+    optionType = e.target.value;
+    console.log(optionType);
+    $("#eventId").text(optionType);
+});
+
+
+
 $.ajax({
     url: queryURL,
     method: "GET"
