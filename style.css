@@ -7,6 +7,10 @@ style for my homework website.
     text-align: center;
     margin: 25px;
   }
+  #city-search{
+      border: 1px solid black;
+      
+  }
 
 body {
     font-size: 24px;
