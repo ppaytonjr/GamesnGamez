@@ -82,77 +82,31 @@ header {
     color: #ffffff;
     margin: 15px;
     }
+    a{
+        font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.4px;
+    word-spacing: -0.8px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: none;
+    }
+
+    #foodName{
+        font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.4px;
+    word-spacing: -0.8px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: none;
+    }
 
  
 
-    /* #margin {
-    margin: 50px;
-} */
-
-    /* create styles for the information divs */
-
-
-
-
-/* #circle {
-    float: left;
-    border-radius: 50%;
-    margin-left: 25px;
-    margin-right: 25px;
-    width: 18%;
-    height: 18%;
-    border: 15px solid #ffffff;
-}
-
-#clear {
-    clear: both;
-}
-
-#blue {
-    float: left;
-    margin-top: 0px;
-    margin-left: 0px;
-    align-self: top;
-    position: fixed;
-    height: 100%;
-    width: 20%;
-    background-color: #2b4de6;
-    z-index: -1;
-}
-
-#navigator {
-    float: left;
-    align-self: top;
-    position: fixed;
-    height: 100%;
-    width: 20%;
-    background-color: #2b4de6;
-}
-
-#button {
-    float: left;
-    margin-top: 10px;
-    margin-right: 10%;
-    margin-left: 10%;
-    margin-bottom: 2%;
-    border: 10px solid #f77f10;
-    background-color: #fa903a;
-    color: #ffffff;
-    width: 80%;
-    height: 55px;
-    font-size: 25px;
-    align-content: center;
-    font-family: Impact;
-    border-radius: 2%;
-    clear: both;
-}
-
-#square {
-    float: left;
-    margin-left: 10%;
-    margin-top: 10px;
-    margin-right: 25px;
-    width: 80%;
-    height: 44%;
-    border: 15px solid #ffffff;
-} */
