@@ -22,7 +22,10 @@ $(document).ready(function(){
     });
     console.log(queryURL);
 
-    $.ajax({
+     $(".waves-light").on("click", function(event) {
+         var cityChoice = $("#city-search").val().trim();
+        console.log(cityChoice);
+        $.ajax({
         url:queryURL,
         method:'GET',
         headers: {"user-key": "54c293be0945b9ad43220c20c0194e91"}
@@ -52,16 +55,24 @@ $(document).ready(function(){
                     $('<div>').text(JSON.stringify(response));
                     console.log(response);
                     for (var i=0; i < response.restaurants.length; i++){
-                        console.log(i);
-                        console.log(response.restaurants[i].restaurant.name && response.restaurants[i].restaurant.location.address);
-                        var food = $("<a>" + (response.restaurants[i].restaurant.name ) + "</a>");   
-
-                    $('#foodName').append(food);
+                       //  var food = $("<a>" + (response.restaurants[i].restaurant.name ) + "</a>");   
+                        //var spotT = $("<a>" + (response.restaurants[i].restaurant.location.address) + "</a>");
+                        var img = $('<img src=" '+ response.restaurants[i].restaurant.thumb + '">');
+                        console.log(img); 
+                        $("#foodName").append(img);
+                        var oTc = ("<br>" + "Hours" + ":" + ""+ response.restaurants[i].restaurant.timings +"<br>")
+                        var menuUrl = response.restaurants[i].restaurant.menu_url;
+                        var menu= $("<br>" + '<a href=" ' + menuUrl +'"> Menu' + "</a>")
+                        console.log(menu);
+                        $("#foodName").append(menu);
+                        $("#foodName").append(oTc);
+                        var nameLocal = $("<br>" + ("Name" +":" + "" + response.restaurants[i].restaurant.name) +"</br>" + "<br>" + ("Address" + ":" + "" + response.restaurants[i].restaurant.location.address) + "</br>");
+                        console.log(nameLocal);
+                        var divElement = $('<div>');
+                        $("#foodName").append(nameLocal);
+                        $(divElement).append("<br>");
                     }
-                        for (var i=0; i < response.restaurants.length; i++){
-                        var spotT = $("<a>").text(response.restaurants[i].restaurant.location.address)
-                        $('#foodLocation').append(spotT);
-                        }
+                        
 
                 })
             }
