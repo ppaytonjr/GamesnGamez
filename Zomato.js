@@ -2,18 +2,17 @@ $(document).ready(function(){
     
     var proxy = "https://cors-anywhere.herokuapp.com/"
 
-   var where = "nashville" //prompt("What city are you traveling to?", "")
     
 //    function cityGet(str) {
  //     where = str.charAt(0).toUpperCase() + where.substr(1).toLowerCase();
  //     console.log(where);
  //    };
-    var state = "tn" //prompt("what state?", "");
+    var state = ""
     var howMany = 20 //prompt("how many results?", "")
 
  //   cityGet(where);
 
-    var queryURL="https://developers.zomato.com/api/v2.1/cities?q=" + where + "&count=" + howMany
+    var queryURL="https://developers.zomato.com/api/v2.1/cities?q="// + where + "&count=" + howMany
    
     $('#dropdown2 option').on('click',(e)=>{
         state = e.target.value;
@@ -23,17 +22,18 @@ $(document).ready(function(){
     console.log(queryURL);
 
      $(".waves-light").on("click", function(event) {
+        $("#foodName").empty();
          var cityChoice = $("#city-search").val().trim();
         console.log(cityChoice);
         $.ajax({
-        url:queryURL,
+        url:queryURL + cityChoice + "&count" + howMany,
         method:'GET',
         headers: {"user-key": "54c293be0945b9ad43220c20c0194e91"}
     }).then(function(response){
         $('<div>').text(JSON.stringify(response));
-        //console.log(response);
+        console.log(response);
         
-        var cityState = where.charAt(0).toUpperCase() + where.substr(1).toLowerCase() + ", " + state.toUpperCase();
+        var cityState = cityChoice.charAt(0).toUpperCase() + cityChoice.substr(1).toLowerCase() + ", " + state.toUpperCase();
         console.log(cityState);
         for (var i = 0; i < response.location_suggestions.length; i++) {
 
@@ -80,5 +80,6 @@ $(document).ready(function(){
         };
     })
 
+    })
 })
 
