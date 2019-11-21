@@ -33,8 +33,16 @@ $(document).ready(function(){
     }).then(function(response){
         $('<div>').text(JSON.stringify(response));
         //console.log(response);
+        var tempStr = cityChoice;
+        var tempArray = tempStr.split(" ")
+        tempStr = "";
+        tempArray.forEach(word=>{
+            tempStr += word.charAt(0).toUpperCase() + word.substr(1).toLowerCase() + " ";
+
+        });
+        tempStr = tempStr.trim();    
         
-        var cityState = cityChoice.charAt(0).toUpperCase() + cityChoice.substr(1).toLowerCase() + ", " + state.toUpperCase();
+        var cityState = tempStr + ", " + state.toUpperCase();
         console.log(cityState);
         for (var i = 0; i < response.location_suggestions.length; i++) {
 
