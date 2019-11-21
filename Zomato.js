@@ -38,7 +38,6 @@ $(document).ready(function(){
         tempStr = "";
         tempArray.forEach(word=>{
             tempStr += word.charAt(0).toUpperCase() + word.substr(1).toLowerCase() + " ";
-
         });
         tempStr = tempStr.trim();    
         
