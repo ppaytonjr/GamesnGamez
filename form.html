@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Fun and Food!</title>
+  <title>Food and Fun!</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Compiled and minified JavaScript -->
@@ -13,18 +13,18 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container" >
     <header class="head">
-      <h4><p>Fun and Food</p></h4>
+      <h4><p>Food and Fun!</p></h4>
     </header>
     <row>
-    <div class="col s6 row deep-purple darken-1" id="search">
+    <div class="col s6 row brown lighten-2 z-depth-3" id="search" style="border-radius: 25px;">
         <div id="dropDown" class="col s12">
 <!-- Dropdown Trigger -->
 
-<a class='dropdown-trigger btn' id="eventId" href='#' data-target='dropdown1' style="background-color:#fff">Event Type</a>
+<a class='dropdown-trigger btn pulse' id="eventId" href='#' data-target='dropdown1' style="background-color:#fff">Event Type</a>
 <!-- Dropdown Structure -->
-<ul id='dropdown1' class='dropdown-content' style="color:black">
+<ul id='dropdown1' class='dropdown-content pulse' style="color:black">
   <option value="Music">Music</a></li>
   <option value="Sports">Sports</a></li>
 </ul>
@@ -33,7 +33,7 @@
   </row>
 
     <div id="locoSearch" class="col s12">City Search      <input type="text" id="city-search" style = "width:300px; height:30px; color:#fff; text-align:center;"><br>
-      <a class='dropdown-trigger btn' id="stateId" href='#' data-target='dropdown2'>State</a>
+      <a class='dropdown-trigger btn pulse' id="stateId" href='#' data-target='dropdown2'>State</a>
       <ul id='dropdown2' class='dropdown-content' style = "color:black; min-width: max-content; max-height: 100px;">
           <option value="AL">Alabama</option>
            <option value="AK">Alaska</option>
@@ -116,36 +116,38 @@
 
       </table> -->
 
-    <div class="row deep-purple darken-3" id="sport">
-      <div class="col s12" id="sportName">This div is 12-columns wide on all screen sizes</div>
+    <div class="row lime lighten-4 container z-depth-3 brown-text text-lighten-2" id="sport" style="height:520px;width:100%;border:1px;overflow:auto;border-radius: 25px;">
+      <!-- <div class="col s12" id="sportName">This div is 12-columns wide on all screen sizes</div>
       <div class="col s5" id="sportDate">6-columns (one-half)</div>
       <div class="col s5" id="sportLocation">6-columns (one-half)</div>
       <div class="col s5" id="sportTime">6-columns (one-half)</div>
-      <div class="col s5" id="sportPrice">6-columns (one-half)</div>
+      <div class="col s5" id="sportPrice">6-columns (one-half)</div> -->
     </div>
 
     <br>
 
-    <div class="row deep-purple darken-3" id="music">
-      <div class="col s12" id="musicName">This div is 12-columns wide on all screen sizes</div>
+    <div class="row lime lighten-4 container z-depth-3 brown-text text-lighten-2" id="music" style="height:520px;width:100%;border:1px;overflow:auto;border-radius: 25px;">
+      <!-- <div class="col s12" id="musicName">This div is 12-columns wide on all screen sizes</div>
       <div class="col s5" id="musicDate">6-columns (one-half)</div>
       <div class="col s5" id="musicLocation">6-columns (one-half)</div>
       <div class="col s5" id="musicTime">6-columns (one-half)</div>
-      <div class="col s5" id="musicPrice">6-columns (one-half)</div>
+      <div class="col s5" id="musicPrice">6-columns (one-half)</div> -->
     </div>
 
     <br>
 
-    <div class="row deep-purple darken-3" id="food" >
-      <div class="col s12">
+    <div class="row lime lighten-4 container z-depth-3 brown-text text-lighten-2" id="food" style="border-radius: 25px;">
+      <div class="col s12 brown-text text-lighten-2" style="height:520px;width:100%;border:1px;overflow:auto;">
         <a id="foodName"></a>
         <a id="foodLocation"></a>
       </div>
-      <div class="col s5" id="foodRating"></div>
+      <!-- <div class="col s5" id="foodRating"></div>
       <div class="col s5" id="foodLocation"></div>
       <div class="col s5" id="foodHours"></div>
-      <div class="col s5" id="foodPrice"></div>
+      <div class="col s5" id="foodPrice"></div> -->
     </div>
+
+
 
 
     <script type="text/javascript" src="ticketmaster.js"></script>
