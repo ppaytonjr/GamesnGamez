@@ -13,23 +13,25 @@
 </head>
 
 <body>
-
-
-    <header>
-      <h4>Fun and Food</h4>
+<div class="container">
+    <header class="head">
+      <h4><p>Fun and Food</p></h4>
     </header>
-    <div class="row deep-purple darken-1" id="search">
+    <row>
+    <div class="col s6 row deep-purple darken-1" id="search">
         <div id="dropDown" class="col s12">
 <!-- Dropdown Trigger -->
-<a class='dropdown-trigger btn' id="eventId" href='#' data-target='dropdown1'>Event Type</a>
 
+<a class='dropdown-trigger btn' id="eventId" href='#' data-target='dropdown1' style="background-color:#fff">Event Type</a>
 <!-- Dropdown Structure -->
-<ul id='dropdown1' class='dropdown-content' style = "color:black; min-width: max-content; max-height: min-content;">
+<ul id='dropdown1' class='dropdown-content' style="color:black">
   <option value="Music">Music</a></li>
   <option value="Sports">Sports</a></li>
 </ul>
 
     </div>
+  </row>
+
     <div id="locoSearch" class="col s12">City Search      <input type="text" id="city-search" style = "width:300px; height:30px; color:#fff; text-align:center;"><br>
       <a class='dropdown-trigger btn' id="stateId" href='#' data-target='dropdown2'>State</a>
       <ul id='dropdown2' class='dropdown-content' style = "color:black; min-width: max-content; max-height: 100px;">
@@ -134,20 +136,20 @@
 
     <br>
 
-    <div class="row deep-purple darken-3" id="food">
+    <div class="row deep-purple darken-3" id="food" >
       <div class="col s12">
         <a id="foodName"></a>
         <a id="foodLocation"></a>
       </div>
-      <div class="col s5" id="foodRating">6-columns (one-half)</div>
-      <div class="col s5" id="foodLocation">6-columns (one-half)</div>
-      <div class="col s5" id="foodHours">6-columns (one-half)</div>
-      <div class="col s5" id="foodPrice">6-columns (one-half)</div>
+      <div class="col s5" id="foodRating"></div>
+      <div class="col s5" id="foodLocation"></div>
+      <div class="col s5" id="foodHours"></div>
+      <div class="col s5" id="foodPrice"></div>
     </div>
+
 
     <script type="text/javascript" src="ticketmaster.js"></script>
     <script type="text/javascript" src="Zomato.js"></script>
-
     <script>
         $(document).ready(function() {
             $('.dropdown-trigger').dropdown();
@@ -155,6 +157,7 @@
 
         
     </script>
+    </div>
     </body>
 
 </html>

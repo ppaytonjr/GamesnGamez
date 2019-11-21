@@ -9,12 +9,47 @@ style for my homework website.
   }
   #city-search{
       border: 1px solid black;
-      
+
+  }
+  .head{
+      background-color:black;
+      opacity:0.1;
+  }
+  h4{
+      background-color:black;
+      color:#fff;
+        font-size:70px; ;
+        text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    }
+  
+
+  .darken-1 a{
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+    background-color:#fff;
+    border-radius:10px ;
+  }
+  .btn {
+      color:black;
+  }
+  .darken-1{
+      background-color:#fff,
+  }
+  .waves-light{
+      background-color:#fff;
+      border-radius:10px;
+      font-weight:bold;
+      color:black;
   }
 
 body {
     font-size: 24px;
-    background-color: #d3d3ee;
+    background-image:url('https://www.toptal.com/designers/subtlepatterns/patterns/herringbone.png');
     color: #ffffff;
     }
 
@@ -48,8 +83,9 @@ header {
     margin: 15px;
     }
 
+ 
 
-/* #margin {
+    /* #margin {
     margin: 50px;
 } */
 
