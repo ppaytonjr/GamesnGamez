@@ -21,10 +21,10 @@ $(document).ready(function(){
         $("#stateId").text(state);
     });
     console.log(queryURL);
-    // $(".waves-light").on("click", function(event) {
 
-        // var cityChoice = $("#city-search").val().trim();
-
+     $(".waves-light").on("click", function(event) {
+         var cityChoice = $("#city-search").val().trim();
+        console.log(cityChoice);
         $.ajax({
         url:queryURL,
         method:'GET',
@@ -62,7 +62,7 @@ $(document).ready(function(){
                         $("#foodName").append(img);
                         var oTc = ("<br>" + "Hours" + ":" + ""+ response.restaurants[i].restaurant.timings +"<br>")
                         var menuUrl = response.restaurants[i].restaurant.menu_url;
-                        var menu= $('<br href=" ' + menuUrl +'"> Menu' + "</br>")
+                        var menu= $("<br>" + '<a href=" ' + menuUrl +'"> Menu' + "</a>")
                         console.log(menu);
                         $("#foodName").append(menu);
                         $("#foodName").append(oTc);
