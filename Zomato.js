@@ -25,12 +25,14 @@ $(document).ready(function(){
         $("#foodName").empty();
 
          var cityChoice = $("#city-search").val().trim();
-        console.log(cityChoice);
+        //console.log(cityChoice);
+        console.log("trying api");
         $.ajax({
         url:queryURL + cityChoice + "&count=" + howMany,
         method:'GET',
         headers: {"user-key": "54c293be0945b9ad43220c20c0194e91"}
     }).then(function(response){
+        console.log("first api: ",response);
         $('<div>').text(JSON.stringify(response));
         //console.log(response);
         var tempStr = cityChoice;
@@ -42,9 +44,9 @@ $(document).ready(function(){
         tempStr = tempStr.trim();    
         
         var cityState = tempStr + ", " + state.toUpperCase();
-        console.log(cityState);
+        //console.log(cityState);
         for (var i = 0; i < response.location_suggestions.length; i++) {
-
+            console.log("looping");
             if(response.location_suggestions[i].name === cityState ){
 
                 console.log(response.location_suggestions[i])
@@ -54,7 +56,7 @@ $(document).ready(function(){
                 var queryURL2 ="https://developers.zomato.com/api/v2.1/search?entity_id=" + cityId + "&entity_type=city&count=&sort=cost&order=asc" 
 
                 
-             
+                console.log("trying api2");
                 $.ajax({
                     url:queryURL2,
                     method:'GET',
@@ -62,6 +64,7 @@ $(document).ready(function(){
                 }).then(function(response){
                     $('<div>').text(JSON.stringify(response));
                     console.log(response);
+                    console.log("do api2 stuff here");
                     for (var i=0; i < response.restaurants.length; i++){
                        //  var food = $("<a>" + (response.restaurants[i].restaurant.name ) + "</a>");   
                         //var spotT = $("<a>" + (response.restaurants[i].restaurant.location.address) + "</a>");
