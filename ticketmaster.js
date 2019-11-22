@@ -45,7 +45,7 @@ $("#setVar").on("click", function() {
     
     city = $("#city-search").val().trim();
     cityFormat(city);
-    console.log(city);
+    console.log(city); //console logging city
     // state = $("#dropdown2 option").val();
     console.log(state);
     console.log(optionType);
