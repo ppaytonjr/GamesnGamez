@@ -51,7 +51,7 @@ $("#setVar").on("click", function() {
     console.log(optionType);
 
     var queryURL = "https://app.ticketmaster.com/discovery/v2/events.JSON?stateCode=" + state + "&size=" + size + "&keyword=" + optionType + "&city=" + city + "&apikey=Si8AYzaqaeokY7Ehz9inIZMH5lR2XsNA";
-
+    console.log("trying api");
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -59,6 +59,7 @@ $("#setVar").on("click", function() {
           console.log(response);
         // console.log(response._embedded.events);
         if (response) {
+            console.log("should have response",response);
             $("#eventDivId").empty();
             for (var i = 0; i < response._embedded.events.length; i++) {
                 var responseEventEl = response._embedded.events[i].name;
