@@ -73,7 +73,7 @@ $(document).ready(function(){
                         $("#foodName").append(img);
                         var oTc = ("<br>" + "Hours" + ":" + ""+ response.restaurants[i].restaurant.timings +"<br>")
                         var menuUrl = response.restaurants[i].restaurant.menu_url;
-                        var menu= $("<br>" + '<a href=" ' + menuUrl +'"> Menu' + "</a>")
+                        var menu= $("<br>" + '<a href="' + menuUrl + '" target="_blank">' +  'Menu' + "</a>")
                         console.log(menu);
                         $("#foodName").append(menu);
                         $("#foodName").append(oTc);
