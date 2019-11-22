@@ -12,15 +12,16 @@ style for my homework website.
 
   }
   .head{
-      background-color:black;
-      opacity:0.1;
+      background-color:rgb(139, 92, 64);
+      border-radius: 15px;
+      /* opacity:0.1; */
   }
   h4{
-      background-color:black;
-      color:#fff;
+      background-color:rgb(139, 92, 64);
+      color:rgb(248, 252, 210);
         font-size:70px; ;
         text-shadow:
-		-1px -1px 0 #000,
+		-1px -1px 0 rgb(97, 87, 87)95, 85, 85),
 		1px -1px 0 #000,
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
@@ -89,7 +90,7 @@ header {
     word-spacing: -0.8px;
     color: #000000;
     font-weight: 700;
-    text-decoration: none;
+    text-decoration: underline;
     font-style: italic;
     font-variant: small-caps;
     text-transform: none;
