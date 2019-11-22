@@ -10,17 +10,19 @@ $(document).ready(function(){
         //     <div class="col s5" class="eventTime">obj.time</div>
         //     <a class="col s5" href="obj.link" class="eventLink">Link</a>
         // </div>
-        var wrapper = $('<div>').addClass('row deep-purple darken-3 eventItem');
+        var wrapper = $('<div>').addClass('row eventItem').css({'border-top': '10px solid black'});
         var eventName = $('<div>').addClass('col s12 eventName').text(obj.name);
         var eventLocation = $('<div>').addClass('col s5 eventLocation').text(obj.location);
         var eventDate = $('<div>').addClass('col s5 eventDate').text(obj.date);
         var eventTime = $('<div>').addClass('col s5 eventTime').text(obj.time);
-        var eventLink = $('<a>').addClass('col s5 eventLink').attr('href', obj.link).text("Link");
+        var eventLink = $('<a>').addClass('col s5 eventLink').attr('href', obj.link).text("Get Tickets");
+        var image = $('<img>').addClass('col s5 image').attr('src', obj.image);//added code
         wrapper.append(eventName);
         wrapper.append(eventLocation);
         wrapper.append(eventDate);
         wrapper.append(eventTime);
         wrapper.append(eventLink);
+        wrapper.append(image); //added code
         $('#eventDivId').append(wrapper);
     }
 var sportEventEl = $("#sportEvent");
@@ -34,7 +36,7 @@ var ticketLinkEl = $("#ticketLink");
 // var musicPriceEl = $("#musicPrice");
 
 var city;// prompt("What city?", "");
-var size = "5";
+var size = "200";
 var state; //prompt("What state code?", "");
 
 var optionType; //prompt("Would you like to see Sports or Music", "");
@@ -66,7 +68,8 @@ $("#setVar").on("click", function() {
                 var responseTicketEl = response._embedded.events[i].url;
                 var timeDisplay = moment(response._embedded.events[i].dates.start.localTime, "HH:mm:ss").format("h:mm a");
                 var dateDisplay = moment(response._embedded.events[i].dates.start.localDate, "YYYY-MM-DD").format("MMMM DD YYYY")
-    
+                var imageDisplay = response._embedded.events[i].images[4].url; //added code
+              //var imageDisplayMusic = response._embedded.events[i].images[0];
                 // console.log("Event: ", response._embedded.events[i].name, "Location: ", response._embedded.events[i]._embedded.venues[0].address.line1,"Date: ", dateDisplay,"Time: ", timeDisplay,"Ticket Link: ", response._embedded.events[i].url);
 
                 console.log(responseEventEl);
@@ -82,7 +85,8 @@ $("#setVar").on("click", function() {
                     location: responseLocationEl,
                     date: responseDateEl,
                     time: responseTimeEl,
-                    link: responseTicketEl
+                    link: responseTicketEl,
+                    image: imageDisplay  //added code
                 };
 
                 buildTemplate(obj);
