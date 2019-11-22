@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -87,7 +87,7 @@
            <option value="WI">Wisconsin</option>
            <option value="WY">Wyoming</option>
         </ul>
-        <div><button class="btn waves-effect waves-light" type="submit" name="action">Let's Go!!!
+        <div><button id="setVar" class="btn waves-effect waves-light" type="submit" name="action">Let's Go!!!
             <i class="material-icons right">send</i>
           </button>
         </div>
@@ -116,7 +116,7 @@
 
       </table> -->
 
-    <div class="row lime lighten-4 container z-depth-3 brown-text text-lighten-2" id="sport" style="height:520px;width:100%;border:1px;overflow:auto;border-radius: 25px;">
+    <div class="row lime lighten-4 container z-depth-3 brown-text text-lighten-2" id="eventDivId" style="height:520px;width:100%;border:1px;overflow:auto;border-radius: 25px;">
       <!-- <div class="col s12" id="sportName">This div is 12-columns wide on all screen sizes</div>
       <div class="col s5" id="sportDate">6-columns (one-half)</div>
       <div class="col s5" id="sportLocation">6-columns (one-half)</div>
@@ -126,13 +126,13 @@
 
     <br>
 
-    <div class="row lime lighten-4 container z-depth-3 brown-text text-lighten-2" id="music" style="height:520px;width:100%;border:1px;overflow:auto;border-radius: 25px;">
-      <!-- <div class="col s12" id="musicName">This div is 12-columns wide on all screen sizes</div>
+    <!-- <div class="row lime lighten-4 container z-depth-3 brown-text text-lighten-2" id="music" style="height:520px;width:100%;border:1px;overflow:auto;border-radius: 25px;">
+       <div class="col s12" id="musicName">This div is 12-columns wide on all screen sizes</div>
       <div class="col s5" id="musicDate">6-columns (one-half)</div>
       <div class="col s5" id="musicLocation">6-columns (one-half)</div>
       <div class="col s5" id="musicTime">6-columns (one-half)</div>
       <div class="col s5" id="musicPrice">6-columns (one-half)</div> -->
-    </div>
+ 
 
     <br>
 
